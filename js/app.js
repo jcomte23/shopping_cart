@@ -29,7 +29,9 @@ function agregarProductosAlCarrito(id, card) {
         titulo: card.querySelector("h4").textContent,
         imagen: card.querySelector(".imagen-curso").src,
         cantidad: 1,
-        precio: this.cantidad * precioNumerico,
+        precio: function () {
+            return (this.cantidad * precioNumerico)
+        },
     }
 
     const busquedaProducto = productosCarrito.find(element => element.id === producto.id)
@@ -54,7 +56,7 @@ function listarProductosDelCarrito() {
                 </td>
                 <td>${producto.titulo}</td>
                 <td>${producto.cantidad}</td>
-                <td>${producto.precio}</td>
+                <td>$${producto.precio()}</td>
                 <td>
                     <button class="eliminar-producto btn btn-danger" data-id="${producto.id}">Eliminar</button>
                 </td>
