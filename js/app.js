@@ -21,12 +21,15 @@ vaciarCarrito.addEventListener('click', function (event) {
 })
 
 function agregarProductosAlCarrito(id, card) {
+    let precioNumerico = card.querySelector(".precio span").textContent
+    precioNumerico = Number(precioNumerico.slice(1))
+
     const producto = {
         id: id,
         titulo: card.querySelector("h4").textContent,
         imagen: card.querySelector(".imagen-curso").src,
-        precio: card.querySelector(".precio span").textContent,
         cantidad: 1,
+        precio: this.cantidad * precioNumerico,
     }
 
     const busquedaProducto = productosCarrito.find(element => element.id === producto.id)
