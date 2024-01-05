@@ -19,7 +19,7 @@
    ```
 
 3. **Abrir ArchivoJs.js:**
-   - Ejecuta el archivo index.html en el navegador de tu preferencia.
+   - Ejecuta el archivo ```index.html``` en el navegador de tu preferencia.
 
 ## Autor
 
