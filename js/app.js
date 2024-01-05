@@ -19,8 +19,9 @@ carrito.addEventListener('click', function (event) {
     }
 })
 
-vaciarCarrito.addEventListener('click', function (event) {
-    alert("diste click a vaciar carrito")
+vaciarCarrito.addEventListener('click', function () {
+    productosCarrito.length = 0
+    listarProductosDelCarrito()
 })
 
 function agregarProductosAlCarrito(id, card) {
