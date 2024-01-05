@@ -1,4 +1,4 @@
-<h1 align="center">Carrito De Compras</h1>
+<h1 align="center">Shopping Cart</h1>
 
 <p align="center"><img src="https://th.bing.com/th/id/R.e3339e159c402aa2492d7996564cf257?rik=iZ1MReYgSJghGQ&riu=http%3a%2f%2fpages.amot.in.th%2fadmin%2fuploadfiles%2ffiles%2fts_3d57d2ba27.png&ehk=aAHw%2bw0hrOlD0o6iUFeLhwSvseNZ%2bFlq3Wp00Gcg0yY%3d&risl=&pid=ImgRaw&r=0" width="300" alt="logo"></p>
 
