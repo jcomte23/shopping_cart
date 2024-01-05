@@ -1,3 +1,5 @@
+<h1 align="center">Carrito De Compras</h1>
+
 <p align="center"><img src="https://th.bing.com/th/id/R.e3339e159c402aa2492d7996564cf257?rik=iZ1MReYgSJghGQ&riu=http%3a%2f%2fpages.amot.in.th%2fadmin%2fuploadfiles%2ffiles%2fts_3d57d2ba27.png&ehk=aAHw%2bw0hrOlD0o6iUFeLhwSvseNZ%2bFlq3Wp00Gcg0yY%3d&risl=&pid=ImgRaw&r=0" width="300" alt="logo"></p>
 
 <p align="center">Explora nuestro carrito de compras interactivo desarrollado con HTML, CSS y JavaScript. Crea una experiencia de compra sin problemas en tu tienda online con esta aplicación intuitiva. ¡Descubre la facilidad de comprar en línea y personaliza tu experiencia de usuario con nuestro carrito de compras fácil de integrar!</p>
