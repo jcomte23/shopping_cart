@@ -13,7 +13,10 @@ listaProductos.addEventListener('click', function (event) {
 })
 
 carrito.addEventListener('click', function (event) {
-    alert("diste click al carrito")
+    if (event.target.classList.contains("borrar-producto")) {
+        const id = event.target.getAttribute("data-id")
+        eliminarProductoDelCarrito(id)
+    }
 })
 
 vaciarCarrito.addEventListener('click', function (event) {
@@ -45,6 +48,10 @@ function agregarProductosAlCarrito(id, card) {
     listarProductosDelCarrito()
 }
 
+function eliminarProductoDelCarrito(id) {
+    productosCarrito = productosCarrito.filter(element => element.id !== id)
+    listarProductosDelCarrito()
+}
 
 function listarProductosDelCarrito() {
     tbodyCarrito.innerHTML = ""
@@ -58,7 +65,7 @@ function listarProductosDelCarrito() {
                 <td>${producto.cantidad}</td>
                 <td>$${producto.precio()}</td>
                 <td>
-                    <button class="eliminar-producto btn btn-danger" data-id="${producto.id}">Eliminar</button>
+                    <button class="borrar-producto btn btn-danger" data-id="${producto.id}">Eliminar</button>
                 </td>
             </tr>
         `;
