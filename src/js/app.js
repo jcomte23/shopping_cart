@@ -34,9 +34,7 @@ export const main = () => {
             titulo: card.querySelector("h4").textContent,
             imagen: card.querySelector(".imagen-curso").src,
             cantidad: 1,
-            precio: function () {
-                return (this.cantidad * precioNumerico)
-            },
+            precio: precioNumerico
         }
 
         const busquedaProducto = productosCarrito.find(element => element.id === producto.id)
@@ -69,7 +67,7 @@ export const main = () => {
                 </td>
                 <td>${producto.titulo}</td>
                 <td>${producto.cantidad}</td>
-                <td>$${producto.precio}</td>
+                <td>$${producto.precio*producto.cantidad}</td>
                 <td>
                     <button class="borrar-producto btn btn-danger" data-id="${producto.id}">Eliminar</button>
                 </td>
