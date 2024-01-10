@@ -21,7 +21,7 @@ export const main = () => {
     })
 
     vaciarCarrito.addEventListener('click', function () {
-        productosCarrito.length = 0
+        localStorage.clear()
         listarProductosDelCarrito()
     })
 
@@ -47,17 +47,21 @@ export const main = () => {
             busquedaProducto.cantidad++
         }
 
+        localStorage.setItem("productosCarrito", JSON.stringify(productosCarrito))
         listarProductosDelCarrito()
     }
 
     function eliminarProductoDelCarrito(id) {
-        productosCarrito = productosCarrito.filter(element => element.id !== id)
+        let productosNube = JSON.parse(localStorage.getItem("productosCarrito"))
+        productosNube = productosNube.filter(element => element.id !== id)
+        localStorage.setItem("productosCarrito", JSON.stringify(productosNube))
         listarProductosDelCarrito()
     }
 
     function listarProductosDelCarrito() {
+        const productosNube = JSON.parse(localStorage.getItem("productosCarrito"))
         tbodyCarrito.innerHTML = ""
-        productosCarrito.forEach(function (producto) {
+        productosNube.forEach(function (producto) {
             tbodyCarrito.innerHTML += `
             <tr>
                 <td>
@@ -65,7 +69,7 @@ export const main = () => {
                 </td>
                 <td>${producto.titulo}</td>
                 <td>${producto.cantidad}</td>
-                <td>$${producto.precio()}</td>
+                <td>$${producto.precio}</td>
                 <td>
                     <button class="borrar-producto btn btn-danger" data-id="${producto.id}">Eliminar</button>
                 </td>
@@ -73,6 +77,8 @@ export const main = () => {
         `;
         })
     }
+
+    listarProductosDelCarrito()
 }
 
 main()
